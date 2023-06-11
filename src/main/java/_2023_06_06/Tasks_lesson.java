@@ -39,16 +39,36 @@ public class Tasks_lesson {
 
     // dorabotat etot method!!!!!!!!
     public static int getUnique(int[] array) {
+//        int unique = 0;
+//        for (int i = 0; i < array.length; i++) {
+//            for (int j = i + 1; j < array.length; j++) {
+//                if (array[i] == array[j]) {
+//                    break;
+//                } else {
+//                    unique = array[i];
+//                }
+//            }
+//        }
+//        return unique;
         int unique = 0;
+        boolean isUnique = true;
+
         for (int i = 0; i < array.length; i++) {
+            isUnique = true;
+
             for (int j = i + 1; j < array.length; j++) {
                 if (array[i] == array[j]) {
+                    isUnique = false;
                     break;
-                } else {
-                    unique = array[i];
                 }
             }
+
+            if (isUnique) {
+                unique = array[i];
+                break;
+            }
         }
+
         return unique;
     }
 
@@ -68,7 +88,8 @@ public class Tasks_lesson {
 
         int[] array = {11, 22, 33, 99, 11, 22, 33};
         System.out.println(getUnique1(array));
-
+        System.out.println();
+        System.out.println(getUnique(array));
         }
 
     }

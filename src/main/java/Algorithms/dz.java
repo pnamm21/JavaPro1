@@ -7,6 +7,7 @@ public class dz {
 //        System.out.println(findMaxNumber(arr));
 //        funIterations(3,6);
 
+        Recursion(10,2);
 
     }
 
@@ -32,6 +33,10 @@ public class dz {
 //    }
 
     public static void Recursion(int x,int y){
-
+        if(x==0){
+            System.out.println(y);
+        }else{
+            Recursion(x-1,x+y);
+        }
     }
 }
