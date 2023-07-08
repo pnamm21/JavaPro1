@@ -7,11 +7,8 @@ public class Stack {
 
     public void growSize() {
         int[] newArr = new int[this.stack.length * 2];
-
         System.arraycopy(newArr, 0, this.stack, 0, this.stack.length * 2);
-
 //        this.stack = newArr;
-
     }
 
     public Stack() {
@@ -41,7 +38,6 @@ public class Stack {
         }
         return null;
     }
-
 }
 
 class Main{

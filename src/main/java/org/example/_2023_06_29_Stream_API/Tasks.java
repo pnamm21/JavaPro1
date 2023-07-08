@@ -116,9 +116,18 @@ public class Tasks {
             System.out.println("List has not words start with A");
         }
     }
-    //Дан список строк. Необходимо объединить их в одну строку, разделенную запятой. //Collectors.joining()
 
-    //Дан список объектов Person. Необходимо сгруппировать их по возрасту и вывести результат.
+    //Дан список строк. Необходимо объединить их в одну строку, разделенную запятой. //Collectors.joining()
+    public static void uniqueCharacters(List<String> strings) {
+        //Дан список объектов Person. Необходимо сгруппировать их по возрасту и вывести результат.
+
+        String result7 = strings.stream()
+                .distinct()
+                .sorted()
+                .toList().toString();
+        System.out.println(result7);
+    }
+
     public static void checkNumIsPositive(List<Integer> integers) {
         //Дан список чисел. Необходимо проверить, являются ли все числа положительными.
 //        integers.stream()
@@ -190,7 +199,18 @@ public class Tasks {
         findWordStartWithA(list2);
 
         System.out.println("Task 6");
+
+        System.out.println("Task 7");
+
+
+        System.out.println("Task 8");
+        uniqueCharacters(list2);
+
+        System.out.println("Task 9");
         checkNumIsPositive(list);
+
+        System.out.println("Task 10");
+        getSumLengthAllString(list2);
 
     }
 }
