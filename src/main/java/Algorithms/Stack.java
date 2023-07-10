@@ -40,7 +40,7 @@ public class Stack {
     }
 }
 
-class Main{
+class Main1{
     public static void main(String[] args) {
         Stack stack = new Stack(5);
 
